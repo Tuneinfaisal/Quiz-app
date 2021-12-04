@@ -1,0 +1,39 @@
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 10px;
+    background: linear-gradient(to bottom, #68eacc 0%, #497be8 100%);
+  }
+
+.container {
+  background: linear-gradient(to bottom, #cbf5f5 0%, #647eb6 100%);
+  /* max-width: 400px; */
+  width: 500px;
+  height: auto;
+  margin: 150px auto;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+#submitButton {
+    background-color: #1aaf27; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+#submitButton {
+    transition-duration: 0.4s;
+  }
+  
+#submitButton:hover {
+    background-color: #0c6994; /* Green */
+    color: white;
+  }
