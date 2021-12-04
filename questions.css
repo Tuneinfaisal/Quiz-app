@@ -8,8 +8,7 @@ body {
 
 .container {
   background: linear-gradient(to bottom, #cbf5f5 0%, #647eb6 100%);
-  /* max-width: 400px; */
-  width: 500px;
+  width: 400px;
   height: auto;
   margin: 150px auto;
   padding: 25px;
@@ -30,10 +29,14 @@ body {
 }
 
 #submitButton {
-    transition-duration: 0.4s;
-  }
+  transition-duration: 0.4s;
+}
   
 #submitButton:hover {
-    background-color: #0c6994; /* Green */
-    color: white;
-  }
+  background-color: #0c6994; /* Green */
+  color: white;
+}
+
+h2 {
+    text-align: center;
+}
