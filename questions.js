@@ -44,10 +44,10 @@ const quizData = [
 const quiz = document.getElementById('quiz');
 const answerEls = document.querySelectorAll('.answer');
 const questionEl = document.getElementById('question');
-const a_text = document.getElementById('a_text');
-const b_text = document.getElementById('b_text');
-const c_text = document.getElementById('c_text');
-const d_text = document.getElementById('d_text');
+const a = document.getElementById('optionA');
+const b = document.getElementById('optionB');
+const c = document.getElementById('optionC');
+const d = document.getElementById('optionD');
 const submitBtn = document.getElementById('submitButton');
 let currentQuiz = 0;
 let score = 0;
@@ -56,10 +56,10 @@ function loadQuiz() {
     deselectAnswers();
     const currentQuizData = quizData[currentQuiz];
     questionEl.innerText = currentQuizData.question;
-    a_text.innerText = currentQuizData.a;
-    b_text.innerText = currentQuizData.b;
-    c_text.innerText = currentQuizData.c;
-    d_text.innerText = currentQuizData.d;
+    a.innerText = currentQuizData.a;
+    b.innerText = currentQuizData.b;
+    c.innerText = currentQuizData.c;
+    d.innerText = currentQuizData.d;
 }
 function deselectAnswers() {
     answerEls.forEach(answerEl => answerEl.checked = false)
@@ -85,8 +85,11 @@ submitBtn.addEventListener('click', () => {
         }
         else {
             var percentage = (score/5) * 100;
+            var date = moment().format("MMM Do YY");
             quiz.innerHTML =
-            `<h2>You answered ${score} out of ${quizData.length} <br> Your score is ${percentage} </h2>`
+            `<h2>You answered ${score} out of ${quizData.length} correctly <br> 
+            Your score is ${percentage}
+            As on ${date}</h2>`
         }
     }
 })
