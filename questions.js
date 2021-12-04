@@ -84,9 +84,9 @@ submitBtn.addEventListener('click', () => {
             loadQuiz();
         }
         else {
-            // var percentage = (score/5) * 100;
+            var percentage = (score/5) * 100;
             quiz.innerHTML =
-            `<h2>You answered ${score} out of ${quizData.length} questions correctly </h2>`
+            `<h2>You answered ${score} out of ${quizData.length} questions correctly <br> Your score is ${percentage} </h2>`
         }
     }
 })
